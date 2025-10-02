@@ -1,12 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-    --color-primary-50: #1B1C30;
-    --color-primary-75: #27283A;
-    --color-primary-100: #0D0E23;
-    --color-primary-150: rgba(19, 20, 41, .4);
-    --color-primary-200: #4B4E90;
-    --color-primary-300: #18192D;
-    --color-text: #FFFFFF;
-    --color-accent: #B59616;
+  --color-foreground: #f8fafc;
+  --color-primary: #00bfff;
+  --color-card: #1c2230;
+  --color-primary-foreground: #131924;
+  --color-secondary: #1b2030;
+  --color-secondary-foreground: #f8fafc;
+  --color-muted-foreground: #99a3b3; 
+  --color-border: #1b2030; 
+  --color-sidebar-border: #e4e4e7;
+  --color-sidebar-border: #e4e4e7;
+}
+
+:root {
+  --background: #ffffff; /* rgb(255, 255, 255) */
+  --foreground: #0b0f19; /* rgb(11, 15, 25) */
+
+  --card: #ffffff; /* rgb(255, 255, 255) */
+  --card-foreground: #0b0f19; /* rgb(11, 15, 25) */
+
+  --secondary: #f1f5f9; /* rgb(241, 245, 249) */
+  --secondary-foreground: #0f172a; /* rgb(15, 23, 42) */
+
+  --destructive: #ef4444; /* rgb(239, 68, 68) */
+  --destructive-foreground: #f8fafc; /* rgb(248, 250, 252) */
+
+  --border: #e2e8f0; /* rgb(226, 232, 240) */
+  --input: #e2e8f0; /* rgb(226, 232, 240) */
+  --ring: #0b0f19; /* rgb(11, 15, 25) */
+
+  --radius: 0.5rem;
+
+  --sidebar-background: #fafafa; /* rgb(250, 250, 250) */
+  --sidebar-foreground: #3f3f46; /* rgb(63, 63, 70) */
+
+  --sidebar-primary: #18181b; /* rgb(24, 24, 27) */
+  --sidebar-primary-foreground: #fafafa; /* rgb(250, 250, 250) */
+
+  --sidebar-accent: #f5f5f5; /* rgb(245, 245, 245) */
+  --sidebar-accent-foreground: #18181b; /* rgb(24, 24, 27) */
+
+  --sidebar-border: #e4e4e7; /* rgb(228, 228, 231) */
+  --sidebar-ring: #3b82f6; /* rgb(59, 130, 246) */
+}
+
+@layer base {
+  h1 {
+  }
+
+  h2 {
+  }
+
+  h3 {
+    @apply text-2xl font-bold;
+  }
+
+  h4 {
+    @apply text-lg font-medium;
+  }
+
+  h5 {
+    @apply text-sm;
+  }
 }
