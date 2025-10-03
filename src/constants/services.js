@@ -4,18 +4,18 @@ import { TbWorld } from "react-icons/tb";
 
 export const ServiceData = [
     {
-        icon: CgWebsite,
-        title: 'Application Web',
-        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur provident assumenda fugiat facilis. Eum, aperiam!"
+        icon: TbWorld,
+        title: 'Développement Web',
+        description: "Création de sites web modernes et responsive"
     },
     {
-        icon: TbWorld,
-        title: 'Site Vitrine',
-        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur provident assumenda fugiat facilis. Eum, aperiam!"
+        icon: RxCode,
+        title: 'Solutions sur-mesure',
+        description: "Développement de solutions personnalisées adaptées à vos besoins"
     },
     {
         icon: RxMobile,
         title: 'Application Mobile',
-        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur provident assumenda fugiat facilis. Eum, aperiam!"
+        description: "Développement d'applications mobiles natives et cross-platform"
     },
 ]

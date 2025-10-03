@@ -6,7 +6,7 @@ import { FaCode, FaMobile, FaNetworkWired, FaRocket } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import {ServiceData} from '../constants/services'
+import { ServiceData } from "../constants/services";
 import Card from "../components/ui/Card";
 
 const Services = () => {
@@ -15,11 +15,23 @@ const Services = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 1200,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -51,9 +63,9 @@ const Services = () => {
       {/* Service Card Carrousel */}
       <div className="relative px-12 py-4 ">
         <Slider {...settings}>
-            { ServiceData.map((item) => (
-                <Card item={item} title={item.title} content={item.description}/>
-            )) }
+          {ServiceData.map((item) => (
+            <Card item={item} title={item.title} content={item.description} />
+          ))}
         </Slider>
       </div>
     </div>
