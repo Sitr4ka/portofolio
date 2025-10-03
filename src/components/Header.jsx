@@ -3,9 +3,9 @@ import { NavLink } from "react-router";
 
 const Header = () => {
   return (
-    <nav className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-10">
+    <nav className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-10 invisible lg:visible">
       <div className="container mx-auto px-6 py-4">
-        <div className="flex gap-8">
+        <div className="flex gap-8 justify-center items-center">
           <NavLink
             to="/"
             className={({ isActive }) =>

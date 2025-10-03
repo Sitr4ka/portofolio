@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 @theme {
+  --color-background: #131924;
   --color-foreground: #f8fafc;
   --color-primary: #00bfff;
   --color-card: #1c2230;
   --color-primary-foreground: #131924;
   --color-secondary: #1b2030;
   --color-secondary-foreground: #f8fafc;
-  --color-muted-foreground: #99a3b3; 
-  --color-border: #1b2030; 
+  --color-muted-foreground: #99a3b3;
+  --color-border: #1b2030;
   --color-sidebar-border: #e4e4e7;
   --color-sidebar-border: #e4e4e7;
 }
@@ -46,14 +47,23 @@
 }
 
 @layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
   h1 {
+    @apply text-4xl font-bold;
   }
 
   h2 {
   }
 
   h3 {
-    @apply text-2xl font-bold;
+    @apply text-xl lg:text-2xl font-bold;
   }
 
   h4 {
@@ -63,4 +73,8 @@
   h5 {
     @apply text-sm;
   }
+}
+
+.slick-slide > div {
+  margin: 0 15px;
 }

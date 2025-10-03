@@ -1,19 +1,21 @@
-import { RxCrop, RxDesktop, RxPencil2, RxReader, RxRocket } from "react-icons/rx";
+import { CgWebsite } from "react-icons/cg";
+import { RxCode, RxMobile } from "react-icons/rx";
+import { TbWorld } from "react-icons/tb";
 
 export const ServiceData = [
     {
-        icon: RxCrop,
-        title: 'Site Vitrine',
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        icon: RxDesktop,
+        icon: CgWebsite,
         title: 'Application Web',
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur provident assumenda fugiat facilis. Eum, aperiam!"
     },
     {
-        icon: RxRocket,
+        icon: TbWorld,
+        title: 'Site Vitrine',
+        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur provident assumenda fugiat facilis. Eum, aperiam!"
+    },
+    {
+        icon: RxMobile,
         title: 'Application Mobile',
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur provident assumenda fugiat facilis. Eum, aperiam!"
     },
 ]
