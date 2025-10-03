@@ -64,7 +64,7 @@ const Services = () => {
       <div className="relative px-12 py-4 ">
         <Slider {...settings}>
           {ServiceData.map((item) => (
-            <Card item={item} title={item.title} content={item.description} />
+            <Card item={item} title={item.title} content={item.description}/>
           ))}
         </Slider>
       </div>
