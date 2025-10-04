@@ -12,8 +12,8 @@ const Footer = () => {
   const width = useWindowSize();
 
   let slideNumber = 7; //Default slide to show value
-  if (width <= 600) slideNumber = 3;
-  else if (width <= 1200) slideNumber = 5;
+  if (width <= 600) slideNumber = 2;
+  else if (width <= 1200) slideNumber = 4;
 
   let settings = {
     dots: false,
@@ -34,7 +34,7 @@ const Footer = () => {
           {technos.map((techno, index) => (
             <div
               key={index}
-              className="px-6 py-4 border justify-items-center bg-primary/5 rounded-xl"
+              className="py-4 border justify-items-center bg-primary/5 rounded-xl"
             >
               <img src={techno.img} alt="logo" />
             </div>
