@@ -4,30 +4,39 @@ import Slider from "react-slick";
 // Slick carrousel
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import profileImg from "../assets/images/profile.jpg";
 
 import { technos } from "../constants/technos";
-import { RiTailwindCssFill } from "react-icons/ri";
+import { useWindowSize } from "../pages/CustomHooks";
 
 const Footer = () => {
+  const width = useWindowSize();
+
+  let slideNumber = 7; //Default slide to show value
+  if (width <= 600) slideNumber = 3;
+  else if (width <= 1200) slideNumber = 5;
+
   let settings = {
     dots: false,
     infinite: true,
-    speed: 500,
-    slidesToShow: 5,
+    speed: 1000,
+    slidesToShow: slideNumber,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 1500,
-    autoplaySpeed: 0,
+    autoplaySpeed: 1000,
     cssEase: "linear",
+    initialSlide: 0,
   };
+
   return (
     <div className="mx-auto px-6 py-8">
       <div className="relative px-12 py-4 ">
         <Slider {...settings}>
           {technos.map((techno, index) => (
-            <div key={index} className="px-6 py-4 border justify-items-center bg-primary/5 rounded-xl">
-              <img src={techno.img} alt="logo"/>
+            <div
+              key={index}
+              className="px-6 py-4 border justify-items-center bg-primary/5 rounded-xl"
+            >
+              <img src={techno.img} alt="logo" />
             </div>
           ))}
         </Slider>

@@ -1,6 +1,5 @@
-import React from "react";
+import { useWindowSize } from "./CustomHooks";
 import Slider from "react-slick";
-import { FaCode, FaMobile, FaNetworkWired, FaRocket } from "react-icons/fa";
 
 // Slick carrousel
 import "slick-carousel/slick/slick.css";
@@ -10,45 +9,24 @@ import { ServiceData } from "../constants/services";
 import Card from "../components/ui/Card";
 
 const Services = () => {
+  const width = useWindowSize();
+
+  let slideNumberToShow = 3 //Default slide to show value
+  if (width <= 600) slideNumberToShow = 1;
+  else if (width <= 1200) slideNumberToShow = 2
+
   let settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToShow: slideNumberToShow,
+    slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
     autoplaySpeed: 3000,
     cssEase: "linear",
     initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-    ],
   };
+  
   return (
     <div className="space-y-8">
       <div className="space-y-4 text-center">
@@ -64,7 +42,7 @@ const Services = () => {
       <div className="relative px-12 py-4 ">
         <Slider {...settings}>
           {ServiceData.map((item) => (
-            <Card item={item} title={item.title} content={item.description}/>
+            <Card item={item} title={item.title} content={item.description} />
           ))}
         </Slider>
       </div>
