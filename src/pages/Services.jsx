@@ -33,9 +33,9 @@ const Services = () => {
         <h1 className="bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent lg:invisible">
           Mes Services
         </h1>
-        <p className="">
+        {/* <p className="">
           Des solutions complètes pour donner vie à vos projets digitaux
-        </p>
+        </p> */}
       </div>
 
       {/* Service Card Carrousel */}

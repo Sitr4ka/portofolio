@@ -3,11 +3,11 @@ import { NavLink } from "react-router";
 
 const Header = () => {
   return (
-    <nav className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-10 invisible lg:visible">
+    <nav className="invisible border-b border-border lg:bg-card/50 bg-card/95 backdrop-blur-sm fixed lg:sticky w-full top-0 z-10 lg:visible">
       <div className="container mx-auto px-6 py-4">
-        <div className="flex gap-8 justify-center items-center">
+        <div className="flex flex-col lg:flex-row gap-8 items-center  lg:justify-center lg:items-center ">
           <NavLink
-            to="/"
+            to="/" 
             className={({ isActive }) =>
               `text-sm font-medium transition-colors hover:text-primary ${
                 isActive ? "text-primary" : "text-muted-foreground"

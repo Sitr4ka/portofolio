@@ -28,18 +28,20 @@ const Footer = () => {
   };
 
   return (
-    <div className="mx-auto px-6 py-8">
-      <div className="relative px-12 py-4 ">
-        <Slider {...settings}>
-          {technos.map((techno, index) => (
-            <div
-              key={index}
-              className="py-4 border justify-items-center bg-primary/5 rounded-xl"
-            >
-              <img src={techno.img} alt="logo" />
-            </div>
-          ))}
-        </Slider>
+    <div className="absolute bottom-0 left-0 right-0">
+      <div className="mx-auto px-6 py-8">
+        <div className="relative px-12 py-4 ">
+          <Slider {...settings}>
+            {technos.map((techno, index) => (
+              <div
+                key={index}
+                className="py-4 border justify-items-center bg-primary/5 rounded-xl"
+              >
+                <img src={techno.img} alt="logo" />
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
     </div>
   );
