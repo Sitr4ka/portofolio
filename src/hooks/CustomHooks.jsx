@@ -8,7 +8,6 @@ export function useWindowSize() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  console.log(width);
 
   return width;
 }

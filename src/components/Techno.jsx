@@ -6,9 +6,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import { technos } from "../constants/technos";
-import { useWindowSize } from "../pages/CustomHooks";
+import { useWindowSize } from "../hooks/CustomHooks";
 
-const Footer = () => {
+const Techno = () => {
   const width = useWindowSize();
 
   let slideNumber = 7; //Default slide to show value
@@ -28,7 +28,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="absolute bottom-0 left-0 right-0">
+    <div className="absolute -bottom-22 left-0 right-0">
       <div className="mx-auto px-6 py-8">
         <div className="relative px-12 py-4 ">
           <Slider {...settings}>
@@ -47,4 +47,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Techno;

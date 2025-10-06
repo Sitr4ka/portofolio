@@ -3,7 +3,7 @@ import { FaGithub, FaGithubAlt } from "react-icons/fa";
 
 const Card = ({ item, title, content, technos }) => {
   return !technos ? (
-    <div className="rounded-xl cursor-pointer space-y-4 min-h-70 place-content-center border bg-gradient-to-br from-card to-secondary border-border bg-card text-card-foreground shadow-sm hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(0,188,255,0.2)] group">
+    <div className="rounded-xl cursor-pointer space-y-4 min-h-70 place-content-center border-2 bg-gradient-to-br from-card to-secondary border-primary/20 bg-card text-card-foreground shadow-sm hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(0,188,255,0.2)] group">
       <div className="card-header flex flex-col space-y-3 px-6 border">
         <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
           <item.icon className="w-[32px] h-[32px] text-primary" />
@@ -24,7 +24,7 @@ export default Card;
 
 const DefaultCard = ({ cardImg, title, technos }) => {
   return (
-    <div className="rounded-xl h-max cursor-pointer space-y-4 pb-6 border bg-gradient-to-br from-card to-secondary border-border bg-card text-card-foreground shadow-sm hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(0,188,255,0.2)] group">
+    <div className="rounded-xl h-max cursor-pointer space-y-4 pb-6 border-3 bg-gradient-to-br from-card to-secondary border-primary/20 border-t-8 bg-card text-card-foreground shadow-sm hover:border-primary/50 transition-all hover:shadow-[0_0_20px_rgba(0,188,255,0.2)] group">
       <div className="w-full h-40 overflow-hidden">
         <img src={cardImg} className="text-primary rounded-md"/>
       </div>

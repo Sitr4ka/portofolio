@@ -1,7 +1,6 @@
 import React from "react";
 import Profile from "./Profile";
 import Header from "./Header";
-import Footer from "./Footer";
 import Services from "../pages/Services";
 import Projects from "../pages/Projects";
 import Contact from "../pages/Contact";
@@ -26,18 +25,9 @@ const Layout = ({ children }) => {
         <div className="max-lg:hidden">
           <Outlet />
         </div>
-        <Footer />
       </main>
     </div>
   );
 };
 
 export default Layout;
-
-{
-  /* <main className="flex-1 overflow-auto">
-  <Header />
-  <div className="mx-auto px-6 py-8">{children}</div>
-  <Footer />
-</main> */
-}
